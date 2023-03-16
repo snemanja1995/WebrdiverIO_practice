@@ -1,6 +1,7 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 
 import OrderProduct from '../pageobjects/order.product.js';
+import OrderPage from '../pageobjects/order.product.assert.js'
 
 Given(/^User is on login page$/, async () => {
     await browser.url("/");
@@ -23,6 +24,7 @@ When(/^User order product$/, async () => {
 
 Then(/^User clicks on 'cart' icon$/, async () => {
     await OrderProduct.clickCartIcon();
+    await OrderPage.orderItemsName();
 });
 
 Then(/^User clicks on 'checkout' button$/, async () => {
