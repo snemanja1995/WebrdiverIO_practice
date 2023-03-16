@@ -11,9 +11,6 @@ class LockedOutUser {
     get submitButton () {
         return $('input[type="submit"]');
     }
-    get errorMessage () {
-        return $("//h3[@data-test='error' or text()='Epic sadface: Sorry, this user has been locked out.']")
-    }
 
 
     async enterUsernameandPassword() {
@@ -23,9 +20,6 @@ class LockedOutUser {
     }
     async clickLoginButton() {
         await this.submitButton.click();
-    }
-    async getErrorMessage() {
-        await this.errorMessage.getText();
     }
 }
 
