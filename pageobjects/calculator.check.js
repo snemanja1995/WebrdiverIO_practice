@@ -38,9 +38,6 @@ class CalculatorCheck {
     get continueButton() {
         return $("//input[@id='continue']")
     }
-    get textMessage() {
-        return $("//div[text()='60.45']")
-    }
 
     async enterUsernameandPassword() {
         await this.usernameField.setValue("standard_user");
@@ -72,11 +69,8 @@ class CalculatorCheck {
     }
     async clickContinueButton() {
         await this.continueButton.click();
+    }
     
-    }
-    async getTextMessage() {
-        await this.textMessage.getText();
-    }
 }
 
 export default new CalculatorCheck();
