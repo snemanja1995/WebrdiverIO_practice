@@ -15,7 +15,6 @@ class HomePage {
         assert.strictEqual(await this.productText.getText(),"Products")
         assert.strictEqual(await browser.getUrl(),"https://www.saucedemo.com/inventory.html")
     }
-
 }
 
 export default new HomePage();

@@ -1,4 +1,6 @@
+import userData from "../data/users_data.js"
 class LoginPage {
+    
     
     get usernameField () {
         return $("//input[@id='user-name']");
@@ -13,9 +15,9 @@ class LoginPage {
     }
 
 
-    async enterUsernameandPassword() {
-        await this.usernameField.setValue("standard");
-        await this.passwordField.setValue("secret_sauce");
+    async enterUsernameAndPassword(username, password) {
+        await this.usernameField.setValue(username);
+        await this.passwordField.setValue(password);
 
     }
     async clickLoginButton() {
