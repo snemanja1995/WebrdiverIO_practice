@@ -8,7 +8,7 @@ Feature: Saucedemo website login funcionality
     And Clicks login button
     Then User is logged in
 
-    @InvalidLogin
+  @InvalidLogin
   Scenario: Check login with invalid credentials
 
     Given User is on login page
