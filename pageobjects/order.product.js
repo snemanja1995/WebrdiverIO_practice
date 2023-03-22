@@ -42,9 +42,9 @@ class OrderProduct {
     return $("//h2[text()='Thank you for your order!']");
   }
 
-  async enterUsernameandPassword() {
-    await this.usernameField.setValue("standard_user");
-    await this.passwordField.setValue("secret_sauce");
+  async enterUsernameandPassword(username,password) {
+    await this.usernameField.setValue(username);
+    await this.passwordField.setValue(password);
   }
   async clickLoginButton() {
     await this.submitButton.click();
@@ -64,10 +64,10 @@ class OrderProduct {
   async clickCheckoutButton() {
     await this.checkoutButton.click();
   }
-  async enterFirstNameandLastNameandPostalCode() {
-    await this.firstnameField.setValue("Nemanja");
-    await this.lasttnameField.setValue("Stanisic");
-    await this.postalcodeField.setValue("24000");
+  async enterFirstNameandLastNameandPostalCode(firstName, lastName, number) {
+    await this.firstnameField.setValue(firstName);
+    await this.lasttnameField.setValue(lastName);
+    await this.postalcodeField.setValue(number);
   }
   async clickContinueButton() {
     await this.continueButton.click();

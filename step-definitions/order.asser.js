@@ -1,13 +1,14 @@
 import { Given, When, Then } from "@wdio/cucumber-framework";
 import OrderProduct from "../pageobjects/order.product.js";
 import OrderPage from "../pageobjects/order.product.assert.js";
+import userData from '../data/user_data.js'
 
 Given(/^User is on login page$/, async () => {
   await browser.url("/");
 });
 
 When(/^User enters username and password$/, async () => {
-  await OrderProduct.enterUsernameandPassword();
+  await OrderProduct.enterUsernameandPassword(userData.username, userData.password);
 });
 
 When(/^Clicks login button$/, async () => {
@@ -34,7 +35,8 @@ Then(/^User clicks on checkout button$/, async () => {
 });
 
 Then(/^User fill data user fields$/, async () => {
-  await OrderProduct.enterFirstNameandLastNameandPostalCode();
+  await OrderProduct.enterFirstNameandLastNameandPostalCode(userData.firstName, userData.lastName, userData.number);
+  await browser.pause(2000)
 });
 
 Then(/^User clicks on continue button$/, async () => {
