@@ -6,10 +6,10 @@ class OrderPage{
         return $("//div/a[@id='item_4_title_link']");
     }
     get itemName2() {
-        return $("//div/a[@id='item_0_title_link']");
+        return $("//div[text()='Sauce Labs Bike Light']");
     }
     get itemName3() {
-        return $("//div/a[@id='item_1_title_link']");
+        return $("//div[text()='Sauce Labs Bolt T-Shirt']");
     }
 
     async orderItemsName() {

@@ -1,53 +1,51 @@
-import { Given, When, Then } from '@wdio/cucumber-framework';
-
-import OrderProduct from '../pageobjects/order.product.js';
-import OrderPage from '../pageobjects/order.product.assert.js'
+import { Given, When, Then } from "@wdio/cucumber-framework";
+import OrderProduct from "../pageobjects/order.product.js";
+import OrderPage from "../pageobjects/order.product.assert.js";
 
 Given(/^User is on login page$/, async () => {
-    await browser.url("/");
+  await browser.url("/");
 });
 
 When(/^User enters username and password$/, async () => {
-    await OrderProduct.enterUsernameandPassword();
+  await OrderProduct.enterUsernameandPassword();
 });
 
 When(/^Clicks login button$/, async () => {
-    await OrderProduct.clickLoginButton();
+  await OrderProduct.clickLoginButton();
 });
 
 Then(/^User is logged in$/, async () => {
-    await browser.getUrl();
+  await browser.getUrl();
 });
+
 When(/^User order product$/, async () => {
-    await OrderProduct.clickOrderButton();
+  await OrderProduct.clickOrderButton1();
+  await OrderProduct.clickOrderButton2();
+  await OrderProduct.clickOrderButton3();
 });
 
-Then(/^User clicks on 'cart' icon$/, async () => {
-    await OrderProduct.clickCartIcon();
-    await OrderPage.orderItemsName();
+Then(/^User clicks on cart icon$/, async () => {
+  await OrderProduct.clickCartIcon();
+  await OrderPage.orderItemsName();
 });
 
-Then(/^User clicks on 'checkout' button$/, async () => {
-    await OrderProduct.clickCheckoutButton();
+Then(/^User clicks on checkout button$/, async () => {
+  await OrderProduct.clickCheckoutButton();
 });
 
 Then(/^User fill data user fields$/, async () => {
-    await OrderProduct.enterFirstNameandLastNameandPostalCode();
+  await OrderProduct.enterFirstNameandLastNameandPostalCode();
 });
 
-Then(/^User clicks on 'continue' button$/, async () => {
-    await OrderProduct.clickContinueButton();
+Then(/^User clicks on continue button$/, async () => {
+  await OrderProduct.clickContinueButton();
 });
 
-When(/^User clicks on 'finish' button$/, async () => {
-    await OrderProduct.clickFinishButton();
+When(/^User clicks on finish button$/, async () => {
+  await OrderProduct.clickFinishButton();
 });
 
 Then(/^User ordered the product$/, async () => {
-    await OrderProduct.getTextMessage();
-    await browser.pause(2000);
+  await OrderProduct.getTextMessage();
+  await browser.pause(2000);
 });
-
-
-
-
