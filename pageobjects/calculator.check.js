@@ -39,9 +39,9 @@ class CalculatorCheck {
         return $("//input[@id='continue']")
     }
 
-    async enterUsernameandPassword() {
-        await this.usernameField.setValue("standard_user");
-        await this.passwordField.setValue("secret_sauce");
+    async enterUsernameAndPassword(username, password) {
+        await this.usernameField.setValue(username);
+        await this.passwordField.setValue(password);
 
     }
     async clickLoginButton() {
