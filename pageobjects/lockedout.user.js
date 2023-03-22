@@ -13,9 +13,9 @@ class LockedOutUser {
     }
 
 
-    async enterUsernameandPassword() {
-        await this.usernameField.setValue("standard_user");
-        await this.passwordField.setValue("locked_out_user");
+    async enterUsernameandPassword(username, password) {
+        await this.usernameField.setValue(username);
+        await this.passwordField.setValue(password);
 
     }
     async clickLoginButton() {
