@@ -1,7 +1,7 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 import LockedOutUser from '../pageobjects/lockedout.user.js';
 import ErrorMessage from '../pageobjects/lockedout.assert.js';
-import userData from '../data/data_user.js'
+import userData from '../data/user_data.js'
 
 Given(/^User is on login page$/, async () => {
     await browser.url("/");
