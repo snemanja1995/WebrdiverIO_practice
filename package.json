@@ -11,7 +11,7 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js",
-    "LoginPage": "npx wdio run ./wdio.conf.js --cucumberOpts.tagExpression='@Order'"
+    "LockedUser" : "npx wdio run ./wdio.conf.js --cucumberOpts.tagExpression='@LockedUser'"
   },
   "dependencies": {
     "dotenv": "^16.0.3"
