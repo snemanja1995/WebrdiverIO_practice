@@ -1,7 +1,7 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 import LoginPage from '../pageobjects/login.js';
 import HomePage from '../pageobjects/home.page.js';
-import userData from '../data/users_data.js';
+import userData from '../data/user_data.js';
 
 Given(/^User is on login page$/, async () => {
     await browser.url("/");

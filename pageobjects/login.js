@@ -1,4 +1,4 @@
-import userData from "../data/users_data.js"
+import userData from "../data/user_data.js"
 class LoginPage {
     
     
